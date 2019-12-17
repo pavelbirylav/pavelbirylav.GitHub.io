@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,54 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StudyProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BEr-1a-7V7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type some data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRD-OQ-2bv">
+                                <rect key="frame" x="99" y="30" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-Ca-xIh">
+                                <rect key="frame" x="20" y="71" width="280" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="GhR-K9-2N4"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCt-HA-iwd">
+                                <rect key="frame" x="135.5" y="518" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="showAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="uW5-Hb-dPn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fRD-OQ-2bv" firstAttribute="centerX" secondItem="BEr-1a-7V7" secondAttribute="centerX" id="6bw-HS-WLH"/>
+                            <constraint firstItem="HCt-HA-iwd" firstAttribute="centerX" secondItem="BEr-1a-7V7" secondAttribute="centerX" id="L5w-D2-31B"/>
+                            <constraint firstItem="fRD-OQ-2bv" firstAttribute="top" secondItem="BHg-Po-eX8" secondAttribute="top" constant="30" id="LXs-CV-QGr"/>
+                            <constraint firstItem="BHg-Po-eX8" firstAttribute="bottom" secondItem="HCt-HA-iwd" secondAttribute="bottom" constant="20" id="Oqn-Dl-MKD"/>
+                            <constraint firstItem="Ypv-Ca-xIh" firstAttribute="leading" secondItem="BHg-Po-eX8" secondAttribute="leading" constant="20" id="SmA-oM-anz"/>
+                            <constraint firstItem="Ypv-Ca-xIh" firstAttribute="centerX" secondItem="BEr-1a-7V7" secondAttribute="centerX" id="WN6-VC-et8"/>
+                            <constraint firstItem="Ypv-Ca-xIh" firstAttribute="top" secondItem="fRD-OQ-2bv" secondAttribute="bottom" constant="20" id="WUK-Hd-BgB"/>
+                            <constraint firstItem="BHg-Po-eX8" firstAttribute="trailing" secondItem="Ypv-Ca-xIh" secondAttribute="trailing" constant="20" id="ghC-Lj-eho"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BHg-Po-eX8"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="HCt-HA-iwd" id="IIe-Sm-Rej"/>
+                        <outlet property="textField" destination="Ypv-Ca-xIh" id="N6S-fL-Ndw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="106"/>
         </scene>
     </scenes>
 </document>
