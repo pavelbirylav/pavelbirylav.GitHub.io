@@ -1,0 +1,13 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "26P3P56434.com.sportvita.sportvita" ],
+             "paths": [ "*" ]
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": [ "26P3P56434.com.sportvita.sportvita" ]
+   }
+}
