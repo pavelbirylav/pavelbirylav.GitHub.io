@@ -2,7 +2,7 @@
   "applinks": {
       "details": [
            {
-             "appID": [ "26P3P56434.com.sportvita.sportvita" ],
+             "appID": "26P3P56434.com.sportvita.sportvita" ,
              "paths": [ "*" ]
            }
        ]
