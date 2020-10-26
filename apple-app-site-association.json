@@ -3,12 +3,7 @@
       "details": [
            {
              "appIDs": [ "26P3P56434.com.sportvita.sportvita" ],
-             "components": [
-                    {
-                         "/": "*",
-                        "comment": "Matches all URL paths"
-                    }
-                ]
+             "paths": [ "*" ]
            }
        ]
    },
